@@ -20,5 +20,24 @@ window.onload = function() {
             .addTo(map)
             .bindPopup('<strong> Doc\'s Pad </strong> is located here.')
                 .openPopup()
-    
+        L.marker([ 44.057198,-123.032979 ])
+            .addTo(map)
+            .bindPopup('<strong> JX Pop Karaoke </strong> is located here.')
+                .openPopup()
+        L.marker([ 44.037643,-122.987217 ])
+            .addTo(map)
+            .bindPopup('<strong> Caught-In-The-Act </strong> is located here.')
+                .openPopup()
+       function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+           }
+       }
+       function showPosition(position) {
+        L.marker([position.coords.latitude ,position.coords.longitude ])
+            .addTo(map)
+            .bindPopup('<strong>I\'m here</strong>')
+            .openPopup()
+       } 
+       getLocation();
 }
