@@ -33,7 +33,7 @@ app.logger.setLevel(logging.DEBUG)
 @app.route("/map")
 def map():
     app.logger.debug("main page entry")
-    return flask.render_template('index.html')
+    run flask.render_template('index.html')
 
 
 @app.errorhandler(404)
